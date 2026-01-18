@@ -32,7 +32,6 @@ This module demonstrates an understanding of Docker fundamentals, container netw
 - MongoDB
 - LoopBack API framework
 
----
 
 ## 📁 Project Structure
 
