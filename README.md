@@ -101,8 +101,3 @@ This project serves as a portfolio artifact demonstrating real-world experience 
 
 It is directly applicable to **Junior Full Stack Developer**, **Cloud Developer**, and **Backend Developer** roles.
 
----
-
-## License
-
-This project is for educational and professional portfolio use.
