@@ -1,88 +1,105 @@
-# Operating Platforms – Software Design Project
+# CS-470 Project One – Serverless Full Stack Application (AWS)
 
 ## Project Overview
 
-This project focused on designing a **cross-platform software architecture** for *The Gaming Room*, a client seeking to expand their web-based game **Draw It or Lose It** beyond its original Android-only implementation.
+This project demonstrates the migration of a traditional full stack Question & Answer (QnA) web application to a **cloud-based, serverless architecture using Amazon Web Services (AWS)**. The application was redesigned to leverage AWS-managed services in order to improve scalability, performance, security, and maintainability.
 
-The objective was to create a **scalable, maintainable, and platform-agnostic design** that could support multiple operating systems while maintaining consistent functionality and performance.
-
----
-
-## Client & Requirements
-
-**Client:** The Gaming Room  
-**Application Type:** Web-based multiplayer game  
-
-**Primary Requirement:**  
-Design a reusable software architecture that allows the game to operate across multiple platforms (web and mobile), rather than being limited to Android.
-
-Key requirements included:
-- Reliable client-server communication  
-- Cross-platform compatibility  
-- Scalability for multiple users  
-- Maintainable and extensible design  
+The project was completed as part of **CS-470: Full Stack Development II** and focuses on applying cloud development principles, serverless APIs, and elastic infrastructure.
 
 ---
 
-## My Role & Contributions
+## Application Description
 
-- Designed client-server interaction logic  
-- Researched operating platform constraints and architectural best practices  
-- Developed a structured software design document outlining system components  
-- Applied incremental development principles to break the system into manageable parts  
+The application is a **QnA platform** that allows users to perform full CRUD (Create, Read, Update, Delete) operations on **Questions** and **Answers**.
 
----
-
-## Design Process & Technical Approach
-
-I approached the design using a **modular, step-by-step strategy**, focusing on clear separation of concerns between system components.
-
-The software design document helped:
-- Define system boundaries early  
-- Clarify responsibilities between the client and server  
-- Reduce ambiguity before implementation  
-- Provide a roadmap for future development  
-
-Research was essential in understanding platform limitations and selecting appropriate design patterns.
+The original application used a traditional MEAN-style server architecture. In this project, the backend and frontend were fully decoupled and migrated to AWS-native services.
 
 ---
 
-## User-Centered Design Considerations
+## Cloud Architecture
 
-User needs were incorporated by carefully analyzing project requirements and designing the system to support consistent user experiences across platforms.
+### Frontend
+- **Angular** static website
+- Hosted on **Amazon S3** using serverless web hosting
+- Public access configured through bucket policies
+- Frontend communicates directly with AWS APIs
 
-Considering user needs is critical because developer assumptions may differ from real-world usage. User-focused design improves usability, performance, and adoption.
+### Backend
+- **AWS Lambda** functions used to handle all business logic
+- Lambda functions deployed using container-based compute models
+- **Amazon API Gateway** exposes RESTful endpoints
+- CORS manually configured to allow frontend access
+
+### Database
+- **Amazon DynamoDB**
+- NoSQL database designed to support CRUD operations
+- Separate tables for Questions and Answers
+- Fully managed, scalable, and serverless
 
 ---
 
-## Lessons Learned & Future Improvements
+## Key Features
 
-Through this project, I strengthened my understanding of:
-- Software architecture planning  
-- Cross-platform application design  
-- Client-server communication  
-- The importance of documentation before implementation  
-
-In future projects, I would focus on:
-- Producing design documentation earlier  
-- Refining architecture diagrams  
-- Improving efficiency through reusable design patterns  
+- Serverless frontend hosting using Amazon S3  
+- RESTful API built with API Gateway and Lambda  
+- Cloud-native database using DynamoDB  
+- Full CRUD functionality for Questions and Answers  
+- Secure access via IAM roles and policies  
+- Elastic scaling with no server management required  
 
 ---
 
-## Skills Demonstrated
+## AWS Services Used
 
-- Software Architecture Design  
-- Client-Server Communication  
-- Incremental Development  
-- Technical Research  
-- Cross-Platform Design Principles  
+- Amazon S3 (Static Website Hosting)  
+- AWS Lambda (Serverless Compute)  
+- Amazon API Gateway (Serverless API)  
+- Amazon DynamoDB (NoSQL Database)  
+- AWS IAM (Roles, Policies, and Security)  
+
+---
+
+## Security Implementation
+
+- IAM roles configured to allow least-privilege access  
+- Lambda functions granted read/write access to DynamoDB  
+- API Gateway permissions configured for Lambda invocation  
+- Public access restricted appropriately for S3 frontend hosting  
+
+---
+
+## Deployment Details
+
+- Frontend Angular application built and deployed to S3  
+- Backend APIs deployed using the `api` deployment stage  
+- Frontend configured to communicate with AWS API endpoints  
+- Application successfully tested to confirm full CRUD functionality  
+
+---
+
+## Learning Outcomes
+
+Through this project, I demonstrated the ability to:
+
+- Apply cloud-based development principles  
+- Design and deploy serverless full stack applications  
+- Migrate backend logic to AWS Lambda microservices  
+- Implement secure, scalable APIs  
+- Integrate frontend applications with cloud-native backends  
 
 ---
 
 ## Professional Relevance
 
-This project demonstrates my ability to translate requirements into a structured technical design, think beyond a single platform, and communicate design decisions clearly. These skills directly apply to junior full stack and backend development roles.
+This project serves as a portfolio artifact demonstrating real-world experience with:
+
+- AWS serverless architecture  
+- Cloud application migration  
+- Full stack development  
+- RESTful API design  
+- Cloud security best practices  
+
+It is directly applicable to **Junior Full Stack Developer**, **Cloud Developer**, and **Backend Developer** roles.
 
 ---
 
